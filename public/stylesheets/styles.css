@@ -1,0 +1,67 @@
+.hero-login{
+    width: 30%;
+    margin: 50px auto;
+}
+
+.hero-register{
+    width: 70%;
+    margin: 50px auto;
+}
+
+.hero-main{
+    margin: 70px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-main > h3{
+    margin-bottom: 1rem;
+}
+
+.hero-main > button{
+    margin-top: 1rem;
+    width: 30%;
+}
+
+.hero-display{
+    border: 1px #5fb1f3 solid;
+    width: 600px;
+    height: 300px;
+    position: absolute;
+    top: 10rem;
+    right: 5rem;
+}
+
+.hero-display__withdraw{
+    margin: 1rem;
+    display: none;
+}
+
+.withdraw__button{
+    margin: 0 1rem;
+}
+
+.hero-display__deposit{
+    margin: 1rem;
+    display: none;
+}
+
+.deposit__button{
+    margin: 0 1rem;
+}
+
+.hero-display__balance{
+    margin: 1rem;
+    display: none;
+}
+
+.navbar-links{
+    text-decoration: none;
+    color: #fff;
+    padding: 0 15px;
+}
+
+.navbar-links:hover {
+    text-decoration: none;
+    color: #e82a2a;
+}

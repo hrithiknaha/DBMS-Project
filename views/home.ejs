@@ -1,0 +1,41 @@
+<% include partials/header %>
+
+
+<div class="container">
+    <div class="hero-main">
+        <h3>Welcome <%= user.name %></h3>
+        <button class="btn btn-outline-primary" onclick="balance()">Check balance</button>
+        <button class="btn btn-outline-primary" onclick="withdraw()">Withdraw Money</button>
+        <button class="btn btn-outline-primary" onclick="deposit()">Deposit Money</button>
+        <button class="btn btn-outline-primary">Balance Transfer</button>
+        <button class="btn btn-outline-primary">Information</button>
+    </div>
+    
+    <div class="hero-display">
+        <% if(user.balance==null) {%>
+            <h5 class="hero-display__balance">Your Balance is 0.00</h5> 
+            <% } else { %>
+            <h5 class="hero-display__balance">Your Balance is <%= user.balance %></h5>
+            <% } %>
+        <div class="hero-display__withdraw">
+            <form action="/home/withdraw?_method=PUT" method="POST">
+                <div class="form-row">
+                    <input type="number" class="form-control col-md-6" placeholder="Enter Ammount" name="balance">
+                    <button type="submit" class="btn btn-primary col-mid-6 withdraw__button">Withdraw</button>
+                </div>
+            </form>
+        </div>
+        <div class="hero-display__deposit">
+            <form action="/home/deposit?_method=PUT" method="POST">
+                <div class="form-row">
+                    <input type="number" class="form-control col-md-6"  placeholder="Enter Ammount" name="deposit">
+                    <button type="submit" class="btn btn-primary col-mid-6 deposit__button">Deposit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="main.js"></script>
+<% include partials/footer %>
+

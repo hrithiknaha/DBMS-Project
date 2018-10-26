@@ -1,0 +1,60 @@
+<% include partials/header %>
+
+<div class="container">
+    <form class="hero-register" action="/register" method="POST">
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputEmail4">Security ID</label>
+          <input type="text" class="form-control" id="inputEmail4" placeholder="ID" name="username">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputPassword4">Security Password</label>
+          <input type="password" class="form-control" id="inputPassword4" placeholder="Password" name="password">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputPassword4">Name</label>
+          <input type="text" class="form-control" id="inputPassword4" placeholder="Name" name="name">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputPassword4">Age</label>
+          <input type="number" class="form-control" id="inputPassword4" placeholder="Age" name="age">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputAddress">Balance</label>
+        <input type="number" class="form-control" id="inputAddress" placeholder="Enter ammount" name="balance">
+      </div>
+      <div class="form-group">
+        <label for="inputAddress2">Branch</label>
+        <input type="text" class="form-control" id="inputAddress2" placeholder="...">
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputCity">City</label>
+          <input type="text" class="form-control" id="inputCity">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="inputState">Account Type</label>
+          <select id="inputState" class="form-control">
+            <option selected>Choose...</option>
+            <option>Savings</option>
+            <option>Current</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck">
+          <label class="form-check-label" for="gridCheck">
+            I, Agree to comply with the Rules & Regulations of the Bank
+          </label>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Sign Up</button>
+    </form>
+</div>
+
+
+<%include partials/footer %>
